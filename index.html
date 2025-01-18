@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>User Information Submission</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Submit Information</h1>
+    
+    <form id="submissionForm">
+      <!-- General Information Section -->
+      <fieldset>
+        <legend>General Information</legend>
+        <label for="nitEmpresa">NIT Empresa:</label>
+        <input type="text" id="nitEmpresa" name="nitEmpresa" required>
+
+        <label for="fechaIngreso">Fecha Ingreso:</label>
+        <input type="date" id="fechaIngreso" name="fechaIngreso" required>
+
+        <label for="fechaSalida">Fecha Salida:</label>
+        <input type="date" id="fechaSalida" name="fechaSalida" required>
+      </fieldset>
+
+      <!-- PDF File Upload Section -->
+      <fieldset>
+        <legend>Upload PDF Files</legend>
+        <input type="file" id="pdfUpload" accept="application/pdf">
+        <button type="button" id="addPdf">Add PDF</button>
+        <ul id="pdfList"></ul>
+      </fieldset>
+
+      <!-- Individuals Information Section -->
+      <fieldset>
+        <legend>Individuals Information</legend>
+        <div id="individualsContainer"></div>
+        <button type="button" id="addWorker">Add Worker</button>
+      </fieldset>
+
+      <button type="submit">Submit</button>
+    </form>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
